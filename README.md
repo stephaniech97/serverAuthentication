@@ -12,7 +12,7 @@ npm run dev:server
 How to use use in the db directory
 npm run json:server
 
-Voor authenticated fetch : aanpassen van de config file is noodzakelijk voordat comunica deze zal gebruiken. Het gebruikt normaal de config file met native. Nu staat het normaal in de sparql init in de config op node fetch
+Voor authenticated fetch : aanpassen van de config file in de sparql init is noodzakelijk(!) voordat comunica deze zal gebruiken. Het gebruikt normaal de config file met native. Deze actor folder in de repo steken (andere replacen) en dan de config file aanpassen zou het spel moeten activeren.
 
 commando in terminal poging tot testing
 node ./packages/actor-init-sparql-file/bin/query.js http://stchen:passwd@localhost:4000/login -f query.sparql 
