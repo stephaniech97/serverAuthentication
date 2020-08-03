@@ -12,3 +12,16 @@ npm run dev:server
 How to use use in the db directory
 npm run json:server
 
+Voor authenticated fetch : aanpassen van de config file is noodzakelijk voordat comunica deze zal gebruiken. Het gebruikt normaal de config file met native. Nu staat het normaal in de sparql init in de config op node fetch
+
+commando in terminal poging tot testing
+node ./packages/actor-init-sparql-file/bin/query.js http://stchen:passwd@localhost:4000/login -f query.sparql 
+
+probleem along the way @ parsing van de url :
+https://github.com/comunica/comunica/blob/master/packages/actor-init-sparql/lib/ActorInitSparql.ts#L143
+
+
+"Voor die server vraag : ik heb momenteel een server die kan authenticaten. Dus eenmaal de config aangepast met de fetch node kan ik mijn server opstarten. Moet ik dan de volgende link in comunica te zetten node ./packages/actor-init-sparql/bin/http.js "{ \"sources\": [{ \"type\": \"hypermedia\", \"value\" : \"localhost/login\" }]}" Als mijn localhost/login de authentication doet? Je zei ook iets over rdf files. Moet ik een rdf file terugsturen of ? "
+
+Antwoord van Ruben
+=> Ik zou gewoon bin/query.js gebruiken ipv http.js, zal testen makkelijker maken
